@@ -1,0 +1,43 @@
+{
+  "name": "to-array.js",
+  "version": "0.2.0",
+  "description": "Converts primitives and objects (plain or array-like) to a sensible array representation for Node.js and the browser.",
+  "author": "Wil Moore III <wil.moore@wilmoore.com>",
+  "keywords": [
+    "string-to-array",
+    "string",
+    "array",
+    "array-like",
+    "to-array",
+    "toArray"
+  ],
+  "main": "./index",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wilmoore/to-array.js"
+  },
+  "component": {
+    "scripts": {
+      "to-array": "index.js"
+    }
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "browserify": "~2.27.1"
+  },
+  "jam": {
+    "include": [
+      "to-array.js",
+      "Readme.md"
+    ]
+  },
+  "volo": {
+    "url": "https://raw.github.com/wilmoore/to-array.js/v{version}/to-array.js"
+  },
+  "dependencies": {
+    "sliced": "0.0.5"
+  }
+}

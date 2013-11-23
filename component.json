@@ -1,0 +1,19 @@
+{
+  "name": "to-array.js",
+  "version": "0.2.0",
+  "description": "Converts primitives and objects (plain or array-like) to a sensible array representation for Node.js and the browser.",
+  "repo": "wilmoore/to-array.js",
+  "keywords": [
+    "string-to-array",
+    "string",
+    "array",
+    "array-like",
+    "to-array",
+    "toArray"
+  ],
+  "dependencies": {},
+  "development": {},
+  "scripts": [
+    "index.js"
+  ]
+}
