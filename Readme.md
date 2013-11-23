@@ -48,9 +48,10 @@
 
         <script src="to-array.js"></script>
 
-## Inspiration
+## Alternatives
 
-- [to-array][]
+- [timoxley/to-array][to-array]: slightly different symantics.
+- [_.toArray][]: I didn't want this: `_.toArray('hi') // ['h', 'i']`
 
 ## License
 
@@ -59,4 +60,5 @@
 [Node.js]:  http://nodejs.org
 [manual]:   http://yuiblog.com/blog/2006/06/01/global-domination/
 [to-array]: https://github.com/timoxley/to-array
+[_.toArray]: http://underscorejs.org/#toArray
 
