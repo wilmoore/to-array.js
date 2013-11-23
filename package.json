@@ -38,6 +38,5 @@
     "url": "https://raw.github.com/wilmoore/to-array.js/v{version}/to-array.js"
   },
   "dependencies": {
-    "sliced": "0.0.5"
   }
 }
