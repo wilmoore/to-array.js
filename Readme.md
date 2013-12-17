@@ -16,6 +16,12 @@
 
     toArray(void 0 || null) //=> []
 
+#### DOM classList
+
+    <div id="example" class="one two">
+
+    toArray(document.getElementById('example').classList) //=> [ "one", "two" ]
+
 ## Installation
 
 [component](http://component.io/wilmoore/to-array.js)
