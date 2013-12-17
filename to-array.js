@@ -28,6 +28,17 @@ function string(val) {
 };
 
 /**
+ * is value a classList?
+ *
+ * @param  {*} val
+ * @return {Boolean}
+ */
+
+function classlist(val) {
+  return Object.prototype.toString.call(val) == '[object DOMTokenList]';
+};
+
+/**
  * Converts primitives and objects (plain or array-like) to a sensible array representation.
  *
  * #### Array ... Array
@@ -50,8 +61,9 @@ function string(val) {
  */
 
 function toArray(val) {
-  if (string(val)) return [val];
-  if (array(val))  return val.toArray ? val.toArray() : [].slice.call(val);
+  if (string(val))    return [val];
+  if (classlist(val)) return String.prototype.split.call(klass, /\s/);
+  if (array(val))     return val.toArray ? val.toArray() : [].slice.call(val);
 
   return [];
 }
