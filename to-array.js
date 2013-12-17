@@ -62,7 +62,7 @@ function classlist(val) {
 
 function toArray(val) {
   if (string(val))    return [val];
-  if (classlist(val)) return String.prototype.split.call(klass, /\s/);
+  if (classlist(val)) return String.prototype.split.call(val, /\s/);
   if (array(val))     return val.toArray ? val.toArray() : [].slice.call(val);
 
   return [];
