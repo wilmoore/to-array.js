@@ -6,13 +6,17 @@
 
 #### Array ... Array
 
-    toArray([1, 2, 3]);
-    //=> [1, 2, 3]
+```javascript
+toArray([1, 2, 3]);
+//=> [1, 2, 3]
+```
 
 #### undefined/null ... Array
 
-    toArray(void 0 || null)
-    //=> []
+```javascript
+toArray(void 0 || null)
+//=> []
+```
 
 #### String ... Array
 
