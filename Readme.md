@@ -6,21 +6,39 @@
 
 #### Array ... Array
 
-    toArray([1, 2, 3]) //=> [1, 2, 3]
-
-#### String ... Array
-
-    toArray('id') //=> ['id']
+    toArray([1, 2, 3]);
+    //=> [1, 2, 3]
 
 #### undefined/null ... Array
 
-    toArray(void 0 || null) //=> []
+    toArray(void 0 || null)
+    //=> []
+
+#### String ... Array
+
+```javascript
+toArray('id');
+//=> ['id']
+```
+
+#### DOM nodeList
+
+```javascript
+var elements = document.getElementsByTagName('textarea');
+toArray(elements);
+//=> [ <textarea id="wgjc"></textarea>, <textarea id="wgjs"></textarea>, <textarea id="wgju"></textarea> ]
+```
 
 #### DOM classList
 
-    <div id="example" class="one two">
+```html
+<div id="example" class="one two">
+```
 
-    toArray(document.getElementById('example').classList) //=> [ "one", "two" ]
+```javascript
+toArray(document.getElementById('example').classList);
+//=> [ "one", "two" ]
+```
 
 ## Installation
 
