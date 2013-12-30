@@ -26,14 +26,10 @@
   },
   "devDependencies": {
     "mocha": "*",
-    "browserify": "~2.27.1"
+    "browserify": "*",
+    "jsdom": "*"
   },
-  "jam": {
-    "include": [
-      "to-array.js",
-      "Readme.md"
-    ]
-  },
+  "browser": "./index.js",
   "volo": {
     "url": "https://raw.github.com/wilmoore/to-array.js/v{version}/to-array.js"
   },
