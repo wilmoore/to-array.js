@@ -78,7 +78,7 @@ toArray(document.getElementById('example').classList);
 
 ## Alternatives
 
-- [timoxley/to-array][to-array]: slightly different symantics.
+- [timoxley/to-array][to-array]: slightly different semantics.
 - [_.toArray][]: I didn't want this: `_.toArray('hi') // ['h', 'i']`
 
 ## License
