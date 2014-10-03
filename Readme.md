@@ -1,4 +1,6 @@
-# to-array.js [![Build Status](https://travis-ci.org/wilmoore/to-array.js.png?branch=master)](https://travis-ci.org/wilmoore/to-array.js) [![Build Status](https://david-dm.org/wilmoore/to-array.js.png)](https://david-dm.org/wilmoore/to-array.js) [![NPM version](https://badge.fury.io/js/to-array.js.png)](http://badge.fury.io/js/to-array.js)
+# to-array.js
+
+[![Build Status](http://img.shields.io/travis/wilmoore/to-array.js.svg)](https://travis-ci.org/wilmoore/to-array.js) [![NPM version](http://img.shields.io/npm/v/to-array.js.svg)](https://www.npmjs.org/package/to-array.js) [![NPM downloads](http://img.shields.io/npm/dm/to-array.js.svg)](https://www.npmjs.org/package/to-array.js) [![LICENSE](http://img.shields.io/npm/l/to-array.js.svg)](LICENSE)
 
   Converts primitives and objects (plain or array-like) to a sensible array representation for [Node.js][] and the browser.
 
@@ -6,32 +8,29 @@
 
 #### Array ... Array
 
-```javascript
-toArray([1, 2, 3]);
-//=> [1, 2, 3]
-```
+    toArray([1, 2, 3]);
+    //=> [1, 2, 3]
 
 #### undefined/null ... Array
 
-```javascript
-toArray(void 0 || null)
-//=> []
-```
+    toArray(void 0 || null)
+    //=> []
 
 #### String ... Array
 
-```javascript
-toArray('id');
-//=> ['id']
-```
+    toArray('id');
+    //=> ['id']
+
+#### Delimited String ... Array
+
+    toArray('a,b,c', ',');
+    //=> ['a', 'b', 'c']
 
 #### DOM nodeList
 
-```javascript
-var elements = document.getElementsByTagName('textarea');
-toArray(elements);
-//=> [ <textarea id="wgjc"></textarea>, <textarea id="wgjs"></textarea>, <textarea id="wgju"></textarea> ]
-```
+    var elements = document.getElementsByTagName('textarea');
+    toArray(elements);
+    //=> [ <textarea id="wgjc"></textarea>, <textarea id="wgjs"></textarea>, <textarea id="wgju"></textarea> ]
 
 #### DOM classList
 
@@ -39,20 +38,18 @@ toArray(elements);
 <div id="example" class="one two">
 ```
 
-```javascript
-toArray(document.getElementById('example').classList);
-//=> [ "one", "two" ]
-```
+    toArray(document.getElementById('example').classList);
+    //=> [ "one", "two" ]
 
 ## Installation
 
 [component](http://component.io/wilmoore/to-array.js)
 
-    $ component install wilmoore/to-array.js
+    % component install wilmoore/to-array.js
 
 [bower](http://sindresorhus.com/bower-components/)
 
-    $ bower install to-array.js
+    % bower install to-array.js
 
 [npm](https://npmjs.org/package/to-array.js)
 
@@ -60,11 +57,11 @@ toArray(document.getElementById('example').classList);
 
 [jam](http://jamjs.org/packages/#/details/to-array.js)
 
-    $ jam install to-array.js
+    % jam install to-array.js
 
 [volo](http://volojs.org)
 
-    $ volo add wilmoore/to-array.js
+    % volo add wilmoore/to-array.js
 
 [manual][]
 
@@ -81,9 +78,18 @@ toArray(document.getElementById('example').classList);
 - [timoxley/to-array][to-array]: slightly different semantics.
 - [_.toArray][]: I didn't want this: `_.toArray('hi') // ['h', 'i']`
 
+## Building a release
+
+    % npm install
+    % make to-array.js
+    % git commit …
+    % npm version minor
+    % git push
+    % npm publish
+
 ## License
 
-  MIT
+  [MIT](LICENSE)
 
 [Node.js]:  http://nodejs.org
 [manual]:   http://yuiblog.com/blog/2006/06/01/global-domination/

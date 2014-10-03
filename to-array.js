@@ -1,5 +1,4 @@
-(function(e){if("function"==typeof bootstrap)bootstrap("to-array",e);else if("object"==typeof exports)module.exports=e();else if("function"==typeof define&&define.amd)define(e);else if("undefined"!=typeof ses){if(!ses.ok())return;ses.makeToArray=e}else"undefined"!=typeof window?window.toArray=e():global.toArray=e()})(function(){var define,ses,bootstrap,module,exports;
-return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+!function(e){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=e();else if("function"==typeof define&&define.amd)define([],e);else{var f;"undefined"!=typeof window?f=window:"undefined"!=typeof global?f=global:"undefined"!=typeof self&&(f=self),f.toArray=e()}}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 
 // expose `toArray`
 
@@ -60,10 +59,11 @@ function classlist(val) {
  * array representation.
  */
 
-function toArray(val) {
-  if (string(val))    return [val];
-  if (classlist(val)) return String.prototype.split.call(val, /\s/);
-  if (array(val))     return val.toArray ? val.toArray() : [].slice.call(val);
+function toArray(val, delimiter) {
+  if (string(val) && delimiter) return val.split(delimiter);
+  if (string(val))              return [val];
+  if (classlist(val))           return String.prototype.split.call(val, /\s/);
+  if (array(val))               return val.toArray ? val.toArray() : [].slice.call(val);
 
   return [];
 }
@@ -71,4 +71,3 @@ function toArray(val) {
 
 },{}]},{},[1])(1)
 });
-;

@@ -1,8 +1,9 @@
 {
   "name": "to-array.js",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Converts primitives and objects (plain or array-like) to a sensible array representation for Node.js and the browser.",
   "author": "Wil Moore III <wil.moore@wilmoore.com>",
+  "license": "MIT",
   "keywords": [
     "string-to-array",
     "string",
@@ -26,8 +27,7 @@
   },
   "devDependencies": {
     "mocha": "*",
-    "browserify": "*",
-    "jsdom": "*"
+    "browserify": "*"
   },
   "browser": "./index.js",
   "volo": {
