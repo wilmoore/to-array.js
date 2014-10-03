@@ -58,10 +58,11 @@ function classlist(val) {
  * array representation.
  */
 
-function toArray(val) {
-  if (string(val))    return [val];
-  if (classlist(val)) return String.prototype.split.call(val, /\s/);
-  if (array(val))     return val.toArray ? val.toArray() : [].slice.call(val);
+function toArray(val, delimiter) {
+  if (string(val) && delimiter) return val.split(delimiter);
+  if (string(val))              return [val];
+  if (classlist(val))           return String.prototype.split.call(val, /\s/);
+  if (array(val))               return val.toArray ? val.toArray() : [].slice.call(val);
 
   return [];
 }
