@@ -26,6 +26,11 @@
     toArray('a,b,c', ',');
     //=> ['a', 'b', 'c']
 
+#### Number ... Array
+
+    toArray(42);
+    //=> [42]
+
 #### DOM nodeList
 
     var elements = document.getElementsByTagName('textarea');

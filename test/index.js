@@ -18,6 +18,7 @@ describe('toArray()', function(){
     { name: 'null',               param: null,       result: [] },
     { name: 'undefined',          param: void 0,     result: [] },
     { name: 'arrays',             param: [1, 2, 3],  result: [1, 2, 3] },
+    { name: 'numbers',            param: 42,         result: [42] },
     { name: 'strings',            param: 'id',       result: ['id'] },
     { name: 'delimited strings',  param: 'a,b,c',    delimiter: ',', result: ['a','b','c'] },
     { name: 'arguments',          param: args(1, 2), result: [1, 2] },

@@ -5,14 +5,26 @@
 module.exports = toArray;
 
 /**
- * is value an array?
+ * is value array-like?
  *
  * @param  {*} val
  * @return {Boolean}
  */
 
-function array(val) {
+function arrayLike(val) {
+  // do not fail on normal objects that work just like an array but aren't exactly an array.
   return Object(val) === val && 'number' == typeof val.length;
+};
+
+/**
+ * is value a number?
+ *
+ * @param  {*} val
+ * @return {Boolean}
+ */
+
+function number(val) {
+  return Object.prototype.toString.call(val) == '[object Number]';
 };
 
 /**
@@ -60,10 +72,10 @@ function classlist(val) {
  */
 
 function toArray(val, delimiter) {
-  if (string(val) && delimiter) return val.split(delimiter);
-  if (string(val))              return [val];
-  if (classlist(val))           return String.prototype.split.call(val, /\s/);
-  if (array(val))               return val.toArray ? val.toArray() : [].slice.call(val);
+  if (string(val) && delimiter)   return val.split(delimiter);
+  if (string(val) || number(val)) return [val];
+  if (classlist(val))             return String.prototype.split.call(val, /\s/);
+  if (arrayLike(val))             return val.toArray ? val.toArray() : [].slice.call(val);
 
   return [];
 }
