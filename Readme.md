@@ -43,6 +43,10 @@
 
 ## Installation
 
+[npm](https://npmjs.org/package/to-array.js)
+
+    % npm install to-array.js
+
 [component](http://component.io/wilmoore/to-array.js)
 
     % component install wilmoore/to-array.js
@@ -50,10 +54,6 @@
 [bower](http://sindresorhus.com/bower-components/)
 
     % bower install to-array.js
-
-[npm](https://npmjs.org/package/to-array.js)
-
-[![NPM](https://nodei.co/npm/to-array.js.png?downloads=true)](https://nodei.co/npm/to-array.js/)
 
 [jam](http://jamjs.org/packages/#/details/to-array.js)
 
@@ -80,7 +80,6 @@
 
 ## Building a release
 
-    % npm install
     % make to-array.js
     % git commit …
     % npm version minor
