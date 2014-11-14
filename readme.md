@@ -2,7 +2,7 @@
 
 [![Build Status](http://img.shields.io/travis/wilmoore/to-array.js.svg)](https://travis-ci.org/wilmoore/to-array.js) [![NPM version](http://img.shields.io/npm/v/to-array.js.svg)](https://www.npmjs.org/package/to-array.js) [![NPM downloads](http://img.shields.io/npm/dm/to-array.js.svg)](https://www.npmjs.org/package/to-array.js) [![LICENSE](http://img.shields.io/npm/l/to-array.js.svg)](license)
 
-  Converts primitives and objects (plain or array-like) to a sensible array representation for [Node.js][] and the browser.
+> Converts primitives and objects (plain or array-like) to a sensible array representation for [Node.js][] and the browser.
 
 ## Examples
 

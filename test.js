@@ -1,5 +1,5 @@
 var assert  = require('assert');
-var toArray = require('..');
+var toArray = require('./');
 
 describe('toArray()', function(){
 
