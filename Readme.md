@@ -1,6 +1,6 @@
 # to-array.js
 
-[![Build Status](http://img.shields.io/travis/wilmoore/to-array.js.svg)](https://travis-ci.org/wilmoore/to-array.js) [![NPM version](http://img.shields.io/npm/v/to-array.js.svg)](https://www.npmjs.org/package/to-array.js) [![NPM downloads](http://img.shields.io/npm/dm/to-array.js.svg)](https://www.npmjs.org/package/to-array.js) [![LICENSE](http://img.shields.io/npm/l/to-array.js.svg)](LICENSE)
+[![Build Status](http://img.shields.io/travis/wilmoore/to-array.js.svg)](https://travis-ci.org/wilmoore/to-array.js) [![NPM version](http://img.shields.io/npm/v/to-array.js.svg)](https://www.npmjs.org/package/to-array.js) [![NPM downloads](http://img.shields.io/npm/dm/to-array.js.svg)](https://www.npmjs.org/package/to-array.js) [![LICENSE](http://img.shields.io/npm/l/to-array.js.svg)](license)
 
   Converts primitives and objects (plain or array-like) to a sensible array representation for [Node.js][] and the browser.
 
@@ -94,7 +94,7 @@
 
 ## License
 
-  [MIT](LICENSE)
+  [MIT](license)
 
 [Node.js]:  http://nodejs.org
 [manual]:   http://yuiblog.com/blog/2006/06/01/global-domination/
